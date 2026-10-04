@@ -1,0 +1,35 @@
+# Data, models, experiments (never commit)
+/data/
+# artifacts/: ignore everything except small, reproducibility-relevant files
+artifacts/*
+!artifacts/splits/
+!artifacts/manifests/
+!artifacts/optuna/
+!artifacts/results/
+models/*
+!models/onnx/
+!models/onnx/*.onnx
+mlruns/
+wandb/
+*.pt
+*.pth
+*.ckpt
+*.zip
+*.tar.gz
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Secrets and OS junk
+.env
+*.env
+.DS_Store
+Thumbs.db.env.local
+frontend/.env.local

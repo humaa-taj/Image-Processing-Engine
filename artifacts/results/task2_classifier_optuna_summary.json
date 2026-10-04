@@ -1,0 +1,35 @@
+{
+  "study": "task2_classifier",
+  "direction": "minimize",
+  "epochs_per_trial": 12,
+  "objective": "best-epoch validation cross-entropy (val manifest, 736 images)",
+  "search_space": {
+    "lr": "log-uniform [1e-4, 3e-3]",
+    "batch_size": [
+      32,
+      64,
+      128
+    ],
+    "base_channels": [
+      16,
+      24,
+      32,
+      48
+    ],
+    "dropout": "uniform [0.0, 0.5]",
+    "weight_decay": "log-uniform [1e-6, 1e-2]"
+  },
+  "completed": 7,
+  "pruned": 18,
+  "failed": 0,
+  "total": 25,
+  "best_value": 0.01354875136166811,
+  "best_params": {
+    "lr": 0.0005504198203493527,
+    "batch_size": 32,
+    "base_channels": 48,
+    "dropout": 0.31940963580257276,
+    "weight_decay": 2.373777181559422e-05
+  },
+  "best_trial": 23
+}

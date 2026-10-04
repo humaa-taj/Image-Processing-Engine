@@ -1,0 +1,20 @@
+# Build context for the FRONTEND image is frontend/: send only sources, never dependencies or outputs.
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+Dockerfile
+.dockerignore
+# Required by CLAUDE.md section 9 rule 5 (not present here, listed for safety)
+data/
+artifacts/
+models/
+mlruns/
+.venv/
+.git/
+*.pt
+*.pth
+*.ckpt
+*.zip
+*.tar.gz

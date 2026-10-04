@@ -1,0 +1,38 @@
+{
+  "identity": {
+    "mean_weight_all_inputs": 0.4063563013709334,
+    "share_of_inputs_where_top": 0.35881711638048513,
+    "mean_weight_on_own_inputs": 0.9730109128584229,
+    "mean_weight_on_unrelated_inputs": 0.3433946778723235,
+    "share_unrelated_inputs_with_weight_over_0.5": 0.2847884679446413,
+    "inactive": false,
+    "dominates_unrelated": true
+  },
+  "salt": {
+    "mean_weight_all_inputs": 0.2884951933251353,
+    "share_of_inputs_where_top": 0.2985009539384028,
+    "mean_weight_on_own_inputs": 0.9615612504315916,
+    "mean_weight_on_unrelated_inputs": 3.831170808257504e-05,
+    "share_unrelated_inputs_with_weight_over_0.5": 0.0,
+    "inactive": false,
+    "dominates_unrelated": false
+  },
+  "blur": {
+    "mean_weight_all_inputs": 0.11787081809311231,
+    "share_of_inputs_where_top": 0.10918506405014991,
+    "mean_weight_on_own_inputs": 0.3923035817325895,
+    "mean_weight_on_unrelated_inputs": 0.0002567765333363997,
+    "share_unrelated_inputs_with_weight_over_0.5": 0.0,
+    "inactive": false,
+    "dominates_unrelated": false
+  },
+  "occlusion": {
+    "mean_weight_all_inputs": 0.1872776876522849,
+    "share_of_inputs_where_top": 0.2334968656309621,
+    "mean_weight_on_own_inputs": 0.6075290599364919,
+    "mean_weight_on_unrelated_inputs": 0.00716995667333906,
+    "share_unrelated_inputs_with_weight_over_0.5": 3.893626134018611e-05,
+    "inactive": false,
+    "dominates_unrelated": false
+  }
+}

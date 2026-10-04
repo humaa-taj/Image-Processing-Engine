@@ -1,0 +1,9 @@
+{
+  "caption": "Gate weights for this image (occlusion, medium)",
+  "weights": {
+    "Identity": 0.41,
+    "Salt-and-pepper": 0.0,
+    "Blur": 0.0,
+    "Occlusion": 0.59
+  }
+}

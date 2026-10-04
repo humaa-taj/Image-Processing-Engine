@@ -1,0 +1,14 @@
+moe:
+  temperature: 2.6281
+train:
+  lr: 0.000269
+  l1_w: 0.5909
+  ssim_w: 0.4091
+  cls_w: 0.0103
+  bal_w: 0.00106
+  batch_size: 32
+  warmup_epochs: 3
+  warmup_lr: 0.0005
+  joint_epochs: 30
+  patience: 8
+source: 'Optuna study ''task3'', best trial #17 (val score 0.0720)'

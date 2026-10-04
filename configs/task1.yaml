@@ -1,0 +1,12 @@
+model:
+  base_channels: 64
+  bottleneck_dim: 2048
+  dropout: 0.0129
+train:
+  lr: 0.000582
+  batch_size: 16
+  alpha: 0.5577
+  weight_decay: 1.0e-05
+  epochs: 100
+  patience: 20
+source: 'Optuna study ''task1'', best trial #24 (val score 0.1495)'

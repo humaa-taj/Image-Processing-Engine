@@ -1,0 +1,39 @@
+{
+  "study": "task2_specialists",
+  "direction": "minimize",
+  "epochs_per_expert": 10,
+  "objective": "mean over salt/blur/occlusion specialists of best 0.5*val_L1 + 0.5*(1 - val_SSIM)",
+  "search_space": {
+    "lr": "log-uniform [1e-4, 3e-3]",
+    "batch_size": [
+      16,
+      32,
+      64
+    ],
+    "bottleneck_dim": [
+      512,
+      1024,
+      2048
+    ],
+    "base_channels": [
+      24,
+      32,
+      40
+    ],
+    "alpha": "uniform [0.5, 0.95]",
+    "dropout": "fixed 0.0"
+  },
+  "completed": 10,
+  "pruned": 10,
+  "failed": 0,
+  "total": 20,
+  "best_value": 0.17346763300398985,
+  "best_params": {
+    "lr": 0.002080203519699963,
+    "batch_size": 16,
+    "bottleneck_dim": 2048,
+    "base_channels": 40,
+    "alpha": 0.5268066031821165
+  },
+  "best_trial": 17
+}

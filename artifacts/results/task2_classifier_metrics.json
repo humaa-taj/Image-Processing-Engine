@@ -1,0 +1,110 @@
+{
+  "accuracy": 0.9982829108748978,
+  "macro_precision": 0.9977004799954455,
+  "macro_recall": 0.9965703643136186,
+  "macro_f1": 0.9971315311554255,
+  "per_class": {
+    "clean": {
+      "precision": 0.9947859495060373,
+      "recall": 0.9880076315072227,
+      "f1-score": 0.9913852044304663,
+      "support": 3669.0
+    },
+    "salt": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 11007.0
+    },
+    "blur": {
+      "precision": 0.9962889210716872,
+      "recall": 1.0,
+      "f1-score": 0.9981410111085921,
+      "support": 11007.0
+    },
+    "occlusion": {
+      "precision": 0.9997270494040579,
+      "recall": 0.9982738257472518,
+      "f1-score": 0.9989999090826439,
+      "support": 11007.0
+    }
+  },
+  "confusion_matrix_normalized": [
+    [
+      0.988,
+      0.0,
+      0.0112,
+      0.0008
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0017,
+      0.0,
+      0.0,
+      0.9983
+    ]
+  ],
+  "accuracy_per_condition_level": [
+    {
+      "condition": "blur",
+      "level": "high",
+      "accuracy": 1.0
+    },
+    {
+      "condition": "blur",
+      "level": "low",
+      "accuracy": 1.0
+    },
+    {
+      "condition": "blur",
+      "level": "medium",
+      "accuracy": 1.0
+    },
+    {
+      "condition": "clean",
+      "level": "none",
+      "accuracy": 0.9880076315072227
+    },
+    {
+      "condition": "occlusion",
+      "level": "high",
+      "accuracy": 1.0
+    },
+    {
+      "condition": "occlusion",
+      "level": "low",
+      "accuracy": 0.9948214772417553
+    },
+    {
+      "condition": "occlusion",
+      "level": "medium",
+      "accuracy": 1.0
+    },
+    {
+      "condition": "salt",
+      "level": "high",
+      "accuracy": 1.0
+    },
+    {
+      "condition": "salt",
+      "level": "low",
+      "accuracy": 1.0
+    },
+    {
+      "condition": "salt",
+      "level": "medium",
+      "accuracy": 1.0
+    }
+  ]
+}

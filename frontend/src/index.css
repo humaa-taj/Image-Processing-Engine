@@ -1,0 +1,71 @@
+/* Design tokens: strawberry-milk sticker theme. The only place colours, fonts, radii and shadows are defined.
+   No gradients anywhere: flat colour, thick plum outlines, hard offset shadows. */
+@import "tailwindcss";
+@import "@fontsource/fraunces/400-italic.css";
+@import "@fontsource/fraunces/600-italic.css";
+@import "@fontsource/nunito/500.css";
+@import "@fontsource/nunito/600.css";
+@import "@fontsource/nunito/700.css";
+@import "@fontsource/nunito/800.css";
+
+@theme {
+  /* surfaces */
+  --color-page: #fff1f5;          /* strawberry milk */
+  --color-bar: #ffffff;           /* top bar */
+  --color-side: #efe6ff;          /* sidebar (soft lilac) */
+  --color-panel: #ffffff;         /* cards */
+  --color-inset: #ffe6ee;         /* inputs and rows inside cards */
+  --color-line: #f3bfd0;          /* soft pink hairline / tracks */
+  --color-edge: #3b1846;          /* plum outline used on every container */
+  /* text */
+  --color-ink: #3b1846;
+  --color-ink-2: #5d3a6b;
+  --color-muted: #86608f;
+  --color-faint: #b79cc0;
+  --color-dot: #ff4f8b;
+  /* the accent + sticker colours */
+  --color-accent: #e8337a;        /* raspberry pink: primary button, active tab, data */
+  --color-accent-strong: #c71f64;
+  --color-on-accent: #ffffff;
+  --color-soft: #ffd3e3;          /* hover wash */
+  --color-lilac: #c9b6ff;
+  --color-mint: #a8e8cf;
+  --color-butter: #ffe58a;
+  --color-ok: #2fae7c;
+  --color-danger: #c4143f;
+
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Nunito", system-ui, sans-serif;
+  --font-mono: "Nunito", system-ui, sans-serif;
+
+  --radius-panel: 26px;
+  --radius-control: 16px;
+
+  --shadow-pop: 6px 6px 0 0 var(--color-edge);
+  --shadow-pop-sm: 3px 3px 0 0 var(--color-edge);
+}
+
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+/* polka dots (flat SVG tile, no gradient) */
+.bg-grid {
+  background-color: var(--color-page);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Ccircle cx='11' cy='11' r='3' fill='%23f7b6cf'/%3E%3Ccircle cx='33' cy='33' r='3' fill='%23d9c9ff'/%3E%3C/svg%3E");
+}
+/* small bold sentence-case labels */
+.label { font-family: var(--font-sans); font-size: 12.5px; font-weight: 700; letter-spacing: 0.02em; color: var(--color-muted); }
+.num { font-family: var(--font-sans); font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: 0.01em; }
+/* floating layer (sample picker) */
+.glass { background: #ffffff; }
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 2px; }
+/* indeterminate progress (we never show a fake percentage) */
+@keyframes indeterminate { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
+.progress-indeterminate { animation: indeterminate 1.3s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .progress-indeterminate { animation: none; } }

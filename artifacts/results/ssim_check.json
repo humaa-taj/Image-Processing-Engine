@@ -1,0 +1,18 @@
+{
+  "n_images": 160,
+  "max_abs_diff": 1.9073486328125e-05,
+  "mean_abs_diff": 1.9778963178396225e-06,
+  "per_condition_mean_ssim_ours": {
+    "clean": 1.0,
+    "salt": 0.30031384006142614,
+    "blur": 0.8918619483709336,
+    "occlusion": 0.6808199793100357
+  },
+  "per_condition_mean_ssim_skimage": {
+    "clean": 1.0,
+    "salt": 0.30031782388687134,
+    "blur": 0.8918617963790894,
+    "occlusion": 0.6808204650878906
+  },
+  "skimage_settings": "gaussian_weights=True, sigma=1.5, use_sample_covariance=False, data_range=1"
+}

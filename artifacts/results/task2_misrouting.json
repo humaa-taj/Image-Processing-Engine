@@ -1,0 +1,31 @@
+{
+  "n_test_inputs": 36690,
+  "n_misrouted": 63,
+  "misrouted_fraction": 0.0017170891251022077,
+  "mean_ssim_drop_when_misrouted": 0.056189797227344816,
+  "mean_psnr_drop_when_misrouted_finite": -5.469098643252724,
+  "overall_ssim_cost_vs_oracle": 9.64828897607184e-05,
+  "by_true_and_predicted": [
+    {
+      "condition": "clean",
+      "pred": "blur",
+      "n": 41,
+      "mean_ssim_drop": 0.11298548739130904,
+      "mean_l1_increase": 0.031104178122449214
+    },
+    {
+      "condition": "clean",
+      "pred": "occlusion",
+      "n": 3,
+      "mean_ssim_drop": 0.17603890101114908,
+      "mean_l1_increase": 0.04187987123926481
+    },
+    {
+      "condition": "occlusion",
+      "pred": "clean",
+      "n": 19,
+      "mean_ssim_drop": -0.08529286635549445,
+      "mean_l1_increase": -0.02899153149414097
+    }
+  ]
+}

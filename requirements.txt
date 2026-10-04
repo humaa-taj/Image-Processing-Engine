@@ -1,0 +1,20 @@
+# Training / evaluation environment (local .venv, Python 3.11, NVIDIA GPU).
+# Install PyTorch first from the CUDA 12.6 index:
+#   .venv\Scripts\python -m pip install torch==2.14.1 torchvision==0.29.1 --index-url https://download.pytorch.org/whl/cu126
+# Then:  .venv\Scripts\python -m pip install -r requirements.txt
+torch==2.14.1
+torchvision==0.29.1
+numpy==2.4.6
+pillow==12.3.0
+optuna==5.0.0
+mlflow==3.16.1
+matplotlib==3.11.2
+pandas==3.0.6
+scikit-learn==1.9.1
+scikit-image==0.26.0   # only used in tests to cross-check our SSIM
+pytest==9.1.1
+PyYAML==6.0.3
+tqdm==4.70.1
+onnx==1.23.1
+onnxruntime==1.30.0   # CPU build; used for export verification (the backend pins its own copy)
+onnxscript==0.7.2     # needed by torch.onnx.export(dynamo=True)

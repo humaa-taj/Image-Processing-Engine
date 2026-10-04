@@ -1,0 +1,39 @@
+{
+  "n": 63,
+  "task2_pred_ssim": 0.8907121334757123,
+  "task2_oracle_ssim": 0.9469019307030572,
+  "task3_ssim": 0.9735954753936283,
+  "share_task3_better": 0.9523809523809523,
+  "by_case": [
+    {
+      "condition": "clean",
+      "t2_route": "blur",
+      "n": 41,
+      "task2_pred_ssim": 0.887,
+      "task2_oracle_ssim": 1.0,
+      "task3_ssim": 0.999,
+      "task3_better": 1.0,
+      "mean_w_identity": 0.9374
+    },
+    {
+      "condition": "clean",
+      "t2_route": "occlusion",
+      "n": 3,
+      "task2_pred_ssim": 0.824,
+      "task2_oracle_ssim": 1.0,
+      "task3_ssim": 0.8949,
+      "task3_better": 1.0,
+      "mean_w_identity": 0.616
+    },
+    {
+      "condition": "occlusion",
+      "t2_route": "identity",
+      "n": 19,
+      "task2_pred_ssim": 0.9092,
+      "task2_oracle_ssim": 0.8239,
+      "task3_ssim": 0.9312,
+      "task3_better": 0.8421,
+      "mean_w_identity": 0.7473
+    }
+  ]
+}

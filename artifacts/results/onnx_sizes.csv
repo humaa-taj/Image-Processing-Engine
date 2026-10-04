@@ -1,0 +1,8 @@
+model,file,size_mb,params_M
+task1_universal_ae,task1_universal_ae.onnx,28.55,7.121
+task2_classifier,task2_classifier.onnx,10.61,2.641
+task2_expert_blur,task2_expert_blur.onnx,11.23,2.792
+task2_expert_occlusion,task2_expert_occlusion.onnx,11.23,2.792
+task2_expert_salt,task2_expert_salt.onnx,11.23,2.792
+task3_soft_moe,task3_soft_moe.onnx,44.36,11.016
+task4_generator,task4_generator.onnx,167.93,41.973

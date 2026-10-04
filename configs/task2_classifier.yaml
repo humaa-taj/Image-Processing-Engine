@@ -1,0 +1,10 @@
+model:
+  base_channels: 48
+  dropout: 0.3194
+train:
+  lr: 0.00055
+  batch_size: 32
+  weight_decay: 2.37e-05
+  epochs: 40
+  patience: 10
+source: 'Optuna study ''task2_classifier'', best trial #23 (val cross-entropy 0.0135)'

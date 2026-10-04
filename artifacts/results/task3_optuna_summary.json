@@ -1,0 +1,32 @@
+{
+  "study": "task3",
+  "direction": "minimize",
+  "joint_epochs_per_trial": 6,
+  "fixed": {
+    "batch_size": 32,
+    "warmup_epochs": 2,
+    "warmup_lr": 0.0005
+  },
+  "objective": "best-epoch 0.5*val_L1 + 0.5*(1 - val_SSIM) on the balanced val manifest",
+  "collapse_rule": "prune if a branch's mean val weight < 0.05 or > 0.5",
+  "search_space": {
+    "lr": "log-uniform [1e-5, 3e-4]",
+    "temperature": "uniform [0.5, 3.0]",
+    "cls_w": "log-uniform [0.01, 1.0]",
+    "bal_w": "log-uniform [0.001, 0.1]",
+    "l1_share": "uniform [0.5, 0.95] (l1_w = l1_share, ssim_w = 1 - l1_share)"
+  },
+  "completed": 16,
+  "pruned": 4,
+  "failed": 0,
+  "total": 20,
+  "best_value": 0.07201338093727827,
+  "best_params": {
+    "l1_share": 0.5908502376414974,
+    "lr": 0.0002687790241564536,
+    "temperature": 2.6280694348468083,
+    "cls_w": 0.010283539569061783,
+    "bal_w": 0.0010573573330642733
+  },
+  "best_trial": 17
+}

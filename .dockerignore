@@ -1,0 +1,23 @@
+# Build context for the BACKEND image is the repo root, so ignore everything by default
+# and allow only what the image needs (backend code + 3 shared files in src/).
+*
+!backend/
+!src/__init__.py
+!src/config.py
+!src/corruptions.py
+
+# Never send these (also covered by '*' above; listed explicitly per CLAUDE.md section 9 rule 5)
+data/
+artifacts/
+models/
+mlruns/
+.venv/
+node_modules/
+.git/
+*.pt
+*.pth
+*.ckpt
+*.zip
+*.tar.gz
+backend/tests/
+**/__pycache__/

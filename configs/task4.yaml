@@ -1,0 +1,13 @@
+model:
+  base_channels: 64
+  emb_dim: 16
+  dropout: 0.3304
+train:
+  lr_g: 0.00034
+  lr_d: 0.000335
+  batch_size: 8
+  lambda_l1: 152.65
+  epochs: 150
+  checkpoint_every: 10
+  sample_every: 10
+source: 'Optuna study ''task4'', best trial #11 (val score 0.3022)'

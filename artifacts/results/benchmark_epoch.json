@@ -1,0 +1,21 @@
+{
+  "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "torch": "2.14.1+cu126",
+  "num_workers": 2,
+  "data": {
+    "images_per_sec_workers0": 1352.7,
+    "images_per_sec_workers2": 1836.1
+  },
+  "autoencoder_bs32_amp": {
+    "params_M": 9.79,
+    "train_epoch_s": 2.8,
+    "val_pass_s": 0.5,
+    "peak_mem_GB": 0.38
+  },
+  "gan_bs8_fp32": {
+    "G_params_M": 41.84,
+    "D_params_M": 2.78,
+    "epoch_s": 7.9,
+    "peak_mem_GB": 2.71
+  }
+}

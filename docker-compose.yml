@@ -1,0 +1,54 @@
+# Image Processing Engine: the complete app with one command.
+#   docker compose up --build        then open http://localhost:8080
+#
+# backend : FastAPI + ONNX Runtime (CPU). Models are mounted READ-ONLY from ./models/onnx (never baked into
+#           the image). Only reachable inside the compose network (the frontend proxies /api to it).
+# frontend: nginx serving the built React app on port 8080, forwarding /api to http://backend:8000.
+
+services:
+  backend:
+    build:
+      context: .                      # repo root; .dockerignore allows only backend/ and 3 files of src/
+      dockerfile: backend/Dockerfile
+    image: image-processing-engine-backend:1.0
+    volumes:
+      - ./models/onnx:/app/models:ro
+    environment:
+      MODELS_DIR: /app/models
+      CORS_ORIGINS: http://localhost:8080,http://127.0.0.1:8080
+    expose:
+      - "8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=4)"]
+      interval: 30s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+    restart: "no"
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  frontend:
+    build:
+      context: ./frontend
+    image: image-processing-engine-frontend:1.0
+    ports:
+      - "8080:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+    restart: "no"
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

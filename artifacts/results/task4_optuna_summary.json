@@ -1,0 +1,44 @@
+{
+  "study": "task4",
+  "direction": "minimize",
+  "epochs_per_trial": 20,
+  "objective": "best-epoch 0.5*val_L1 + 0.5*(1 - val_SSIM), generated vs real sketch (159 val pairs)",
+  "search_space": {
+    "lr_g": "log-uniform [5e-5, 5e-4]",
+    "lr_d": "log-uniform [5e-5, 5e-4]",
+    "batch_size": [
+      4,
+      8,
+      16
+    ],
+    "base_channels": [
+      32,
+      48,
+      64
+    ],
+    "dropout": "uniform [0.0, 0.5]",
+    "emb_dim": [
+      4,
+      8,
+      16,
+      32
+    ],
+    "lambda_l1": "log-uniform [10, 200]",
+    "discriminator_base": "fixed 64"
+  },
+  "completed": 19,
+  "pruned": 1,
+  "failed": 0,
+  "total": 20,
+  "best_value": 0.30217327550053596,
+  "best_params": {
+    "lr_g": 0.00034034279349507253,
+    "lr_d": 0.00033518772086425487,
+    "batch_size": 8,
+    "base_channels": 64,
+    "dropout": 0.3303982203896656,
+    "emb_dim": 16,
+    "lambda_l1": 152.64997596551393
+  },
+  "best_trial": 11
+}

@@ -1,0 +1,42 @@
+{
+  "study": "task1",
+  "direction": "minimize",
+  "objective": "0.5*val_L1 + 0.5*(1 - val_SSIM), best epoch of each trial",
+  "epochs_per_trial": 15,
+  "search_space": {
+    "lr": "log-uniform [1e-4, 3e-3]",
+    "batch_size": [
+      16,
+      32,
+      64
+    ],
+    "bottleneck_dim": [
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "base_channels": [
+      24,
+      32,
+      48,
+      64
+    ],
+    "dropout": "uniform [0.0, 0.3]",
+    "alpha": "uniform [0.5, 0.95]"
+  },
+  "completed": 16,
+  "pruned": 14,
+  "failed": 0,
+  "total": 30,
+  "best_value": 0.14951102063059807,
+  "best_params": {
+    "lr": 0.0005818338850000651,
+    "batch_size": 16,
+    "bottleneck_dim": 2048,
+    "base_channels": 64,
+    "dropout": 0.01290948447859711,
+    "alpha": 0.5577156634498676
+  },
+  "best_trial": 24
+}
